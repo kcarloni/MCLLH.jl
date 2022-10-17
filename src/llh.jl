@@ -32,7 +32,7 @@ function LLHeff(k, weight_sum, weight_sq_sum; a=1, b=0)
     llh_funct(k) = llh_gammaPriorPoisson(k; α, β)
     return LLHgeneral(k, μ, σsq; llh_funct)
 end
-LLHeff(k, weights; a=1, b=0) = LLHeff(k, sum(w), sum(@. w^2); a, b)
+LLHeff(k, weights; a=1, b=0) = LLHeff(k, sum(weights), sum(@. weights^2); a, b)
 
 
 """
@@ -62,4 +62,4 @@ function LLHmode(k, weight_sum, weight_sq_sum)
     llh_funct(k) = llh_gammaPriorPoisson(k; α, β)
     return LLHgeneral(k, μ, σsq; llh_funct)
 end 
-LLHmode(k, weights) = LLHmode(k, sum(w), sum(@. w^2))
+LLHmode(k, weights) = LLHmode(k, sum(weights), sum(@. weights^2))
