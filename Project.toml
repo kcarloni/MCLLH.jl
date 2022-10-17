@@ -1,0 +1,7 @@
+name = "MCLLH"
+uuid = "340cdb4b-4516-4853-9716-a3a42f061fa2"
+authors = ["kcarloni <kcarloni@g.harvard.edu>"]
+version = "0.1.0"
+
+[deps]
+SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
