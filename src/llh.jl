@@ -28,7 +28,7 @@ This is the main result of the paper arXiv:1901.04645
 function LLHeff(k, weight_sum, weight_sq_sum; a=1, b=0)
     μ, σsq = weight_sum, weight_sq_sum
     α = μ^2/σsq + a
-    β = μ/σsq
+    β = μ/σsq + b
     llh_funct(k) = llh_gammaPriorPoisson(k; α, β)
     return LLHgeneral(k, μ, σsq; llh_funct)
 end
